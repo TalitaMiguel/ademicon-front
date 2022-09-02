@@ -3,16 +3,26 @@ import { TextField, Button } from "@mui/material";
 import useForm from "../../hooks/useForm";
 import { InputsContainer } from "./styled";
 
-const LoginForm = () => {
-  const [form, onChange, clear] = useForm({ email: "", password: "" });
+const SignUpForm = () => {
+  const [form, onChange, clear] = useForm({ name:"", email: "", password: "" });
   const onSubmitForm = (event) => {
-    event.preventDefault();
     console.log(form);
+    event.preventDefault();
   };
-  
   return (
     <InputsContainer>
       <form onSubmit={onSubmitForm}>
+        <TextField
+          name={"name"}
+          value={form.name}
+          onChange={onChange}
+          label={"Nome"}
+          variant={"outlined"}
+          fullWidth
+          margin="normal"
+          required
+          type={"text"}
+        />
         <TextField
           name={"email"}
           value={form.email}
@@ -45,11 +55,11 @@ const LoginForm = () => {
           variant={"contained"}
           color={"primary"}
         >
-          Login
+          Cadastrar
         </Button>
       </form>
     </InputsContainer>
   );
 };
 
-export default LoginForm;
+export default SignUpForm;
