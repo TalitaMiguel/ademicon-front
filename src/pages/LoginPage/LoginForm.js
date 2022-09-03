@@ -1,14 +1,15 @@
-import React from "react";
-import { TextField, Button } from "@mui/material";
+import React, { useState } from "react";
 import useForm from "../../hooks/useForm";
-import { InputsContainer } from "./styled";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 import { login } from "../../services/user";
+import { useNavigate } from "react-router-dom";
+import { InputsContainer } from "./styled";
+import { TextField, Button, CircularProgress } from "@mui/material";
 
 const LoginForm = ({isLoggedButton, setIsLoggedButton}) => {
   const navigate = useNavigate();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
+  const [isLoading, setIsLoading] = useState(false)
 
   const emailValidation = (email) => {
     const validation = /\S+@\S+\.\S+/;
@@ -26,7 +27,7 @@ const LoginForm = ({isLoggedButton, setIsLoggedButton}) => {
       return;
     }
     event.preventDefault();
-    login(form, clear, navigate, setIsLoggedButton);
+    login(form, clear, navigate, setIsLoggedButton, setIsLoading);
   };
 
   return (
@@ -63,7 +64,7 @@ const LoginForm = ({isLoggedButton, setIsLoggedButton}) => {
           variant={"contained"}
           color={"primary"}
         >
-          Login
+          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Fazer Login</>}
         </Button>
       </form>
     </InputsContainer>

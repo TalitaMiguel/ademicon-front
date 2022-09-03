@@ -3,17 +3,20 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { goToHome, goToLogin } from "../routes/coordinator";
 
-export const login = (body, clear, navigate, setIsLoggedButton) => {
+export const login = (body, clear, navigate, setIsLoggedButton, setIsLoading) => {
+  setIsLoading(true)
   axios
     .post(`${BASE_URL}/login`, body)
     .then((res) => {
+      setIsLoading(false)
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("id", res.data.id);
       goToHome(navigate);
       setIsLoggedButton("Logout");
       clear();
     })
-    .catch((error) => {
+    .catch(() => {
+      setIsLoading(false)
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -24,14 +27,17 @@ export const login = (body, clear, navigate, setIsLoggedButton) => {
     });
 };
 
-export const signUp = (body, clear, navigate) => {
+export const signUp = (body, clear, navigate, setIsLoading) => {
+  setIsLoading(true)
   axios
     .post(`${BASE_URL}/signup`, body)
-    .then((res) => {
+    .then(() => {
+      setIsLoading(false)
+      Swal.fire("Cadastrado!", "Seu cadastro foi realizado!", "success");
       goToLogin(navigate);
       clear();
     })
-    .catch((error) => {
+    .catch(() => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -39,17 +45,21 @@ export const signUp = (body, clear, navigate) => {
         text: "Erro ao cadastrar!",
       });
       clear();
+      setIsLoading(false)
     });
 };
 
-export const edit = (id, body, clear, navigate) => {
+export const edit = (id, body, clear, navigate, setIsLoading) => {
+  setIsLoading(true)
   axios
     .put(`${BASE_URL}/${id}`, body)
     .then(() => {
+      setIsLoading(false)
       Swal.fire("Editado!", "Seu cadastro foi editado.", "success");
       goToHome(navigate)
     })
-    .catch((error) => {
+    .catch(() => {
+      setIsLoading(false)
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -66,7 +76,7 @@ export const userData = (id, setData) => {
     .then((res) => {
       setData(res.data[0]);
     })
-    .catch((error) => {
+    .catch(() => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
