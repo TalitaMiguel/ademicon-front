@@ -9,9 +9,8 @@ import SignUpPage from "../pages/SignUpPage/SignUpPage";
 const Router = ({ isLoggedButton, setIsLoggedButton }) => {
   return (
     <Routes>
-      <Route exact path="/" element={<HomePage />} />
+      <Route index element={<HomePage />} />
       <Route
-        exact
         path="/login"
         element={
           <LoginPage

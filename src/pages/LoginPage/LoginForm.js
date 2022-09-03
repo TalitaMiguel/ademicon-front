@@ -55,7 +55,6 @@ const LoginForm = ({isLoggedButton, setIsLoggedButton}) => {
           margin="normal"
           required
           inputProps={{ inputMode: "numeric", pattern: "^.{6,}" }}
-          helperText={"Senha deve conter no mínimo 6 caracteres"}
         />
         <Button
           type={"submit"}

@@ -11,6 +11,7 @@ const Header = ({isLoggedButton, setIsLoggedButton}) => {
 
   const logout = () => {
     localStorage.removeItem("token")
+    localStorage.removeItem("id")
   }
 
   const isLoggedButtonAction = () => {
