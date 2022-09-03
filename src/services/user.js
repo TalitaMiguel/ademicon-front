@@ -72,7 +72,6 @@ export const userData = (id, setData) => {
         title: "Oops...",
         confirmButtonColor: "#B7312C",
         text: "Erro ao localizar usuário!",
-        footer: `Status do erro - ${error.response.status}`,
       });
     });
 };

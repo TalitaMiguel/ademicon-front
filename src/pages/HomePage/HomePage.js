@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import useProtectPage from "../../hooks/useProtectedPage";
-import { ScreenContainer, HomeImage, ButtonContainer } from "./styled";
+import logo from "../../assets/images/logo2.png";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo2.png";
-import { userData, userDelete } from "../../services/user";
 import { goToEdit } from "../../routes/coordinator";
+import { userData, userDelete } from "../../services/user";
+import {
+  ScreenContainer,
+  HomeImage,
+  ButtonContainer,
+  Text1,
+  Text2,
+} from "./styled";
 
 const HomePage = () => {
   useProtectPage();
@@ -20,14 +26,14 @@ const HomePage = () => {
   }, [data]);
 
   const onClickDelete = (id) => {
-    userDelete(id, navigate)
-  }
+    userDelete(id, navigate);
+  };
 
   return (
     <ScreenContainer>
       <HomeImage src={logo} />
-      <h1>{`Seja bem vindo(a), ${data.name_user}`}</h1>
-      <h2>Estamos felizes em ter você aqui conosco!</h2>
+      <Text1>{`Seja bem vindo(a), ${data.name_user}`}</Text1>
+      <Text2>Estamos felizes em ter você aqui conosco!</Text2>
       <ButtonContainer>
         <Button
           sx={{ mt: 2 }}
