@@ -3,13 +3,13 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { goToHome, goToLogin } from "../routes/coordinator";
 
-export const login = (body, clear, navigate) => {
-  console.log(body)
+export const login = (body, clear, navigate, setIsLoggedButton) => {
   axios
     .post(`${BASE_URL}/login`, body)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
       goToHome(navigate)
+      setIsLoggedButton("Logout")
       clear();
     })
     .catch((error) => {

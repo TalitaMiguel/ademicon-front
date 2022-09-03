@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../services/user";
 
-const LoginForm = () => {
+const LoginForm = ({isLoggedButton, setIsLoggedButton}) => {
   const navigate = useNavigate();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
@@ -26,7 +26,7 @@ const LoginForm = () => {
       return;
     }
     event.preventDefault();
-    login(form, clear, navigate);
+    login(form, clear, navigate, setIsLoggedButton);
   };
 
   return (

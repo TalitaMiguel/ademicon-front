@@ -6,13 +6,16 @@ import { goToSignUp } from "../../routes/coordinator";
 import { ScreenContainer, SignUpButtonContainer, LogoImage } from "./styled";
 import LoginForm from "./LoginForm";
 
-const LoginPage = () => {
+const LoginPage = ({ isLoggedButton, setIsLoggedButton }) => {
   const navigate = useNavigate();
 
   return (
     <ScreenContainer>
       <LogoImage src={casa} />
-      <LoginForm />
+      <LoginForm
+        isLoggedButton={isLoggedButton}
+        setIsLoggedButton={setIsLoggedButton}
+      />
       <SignUpButtonContainer>
         <Button
           onClick={() => goToSignUp(navigate)}

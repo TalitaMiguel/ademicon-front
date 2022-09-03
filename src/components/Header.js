@@ -5,8 +5,23 @@ import { useNavigate } from "react-router-dom";
 import { goToHome, goToLogin } from "../routes/coordinator";
 import { StyledToolbar } from "./styled";
 
-const Header = () => {
+const Header = ({isLoggedButton, setIsLoggedButton}) => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
+  const logout = () => {
+    localStorage.removeItem("token")
+  }
+
+  const isLoggedButtonAction = () => {
+    if (token) {
+      logout()
+      setIsLoggedButton("Login")
+      goToLogin(navigate)
+    } else {
+      goToLogin(navigate)
+    }
+  }
 
   return (
     <AppBar position="static">
@@ -14,8 +29,8 @@ const Header = () => {
         <Button onClick={() => goToHome(navigate)} color="inherit">
           ADEMICON
         </Button>
-        <Button onClick={() => goToLogin(navigate)} color="inherit">
-          Login
+        <Button onClick={() => isLoggedButtonAction()} color="inherit">
+          {isLoggedButton}
         </Button>
       </StyledToolbar>
     </AppBar>
