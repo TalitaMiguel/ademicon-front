@@ -1,11 +1,17 @@
 import React from "react";
+import useProtectPage from "../../hooks/useProtectedPage";
+import casa from "../../assets/images/carro-casa.png";
+import { ScreenContainer, LogoImage } from "./styled";
+import EditForm from "./EditForm";
 
 const EditPage = () => {
-    return (
-        <div>
-            <h1>EditPage</h1>
-        </div>
-    )
-}
+  useProtectPage();
+  return (
+    <ScreenContainer>
+      <LogoImage src={casa} />
+      <EditForm />
+    </ScreenContainer>
+  );
+};
 
-export default EditPage
+export default EditPage;

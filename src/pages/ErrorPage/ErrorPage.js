@@ -1,11 +1,14 @@
 import React from "react";
+import { ErrorPageContainer, ErrorImage, ErrorText } from "./styled";
+import error from "../../assets/images/error.png"
 
 const ErrorPage = () => {
-    return (
-        <div>
-            <h1>ErrorPage</h1>
-        </div>
-    )
-}
+  return (
+    <ErrorPageContainer>
+      <ErrorImage src={error} />
+      <ErrorText>Página não encontrada!</ErrorText>
+    </ErrorPageContainer>
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;
