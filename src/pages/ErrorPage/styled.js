@@ -7,7 +7,6 @@ export const ErrorPageContainer = styled.div`
   align-items: center;
   width: 100%;
   height: calc(100vh - 64px);
-  background: #c92b13;
 `;
 
 export const ErrorImage = styled.img`
@@ -17,5 +16,5 @@ export const ErrorImage = styled.img`
 
 export const ErrorText = styled.h1`
   font-size: 4rem;
-  color: white;
+  color: #b7312c;
 `;
