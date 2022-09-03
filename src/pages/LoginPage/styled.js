@@ -34,6 +34,6 @@ export const LogoImage = styled.img`
   width: 70vw;
   max-width: 450px;
   border-radius: 10px;
-  box-shadow: 3px 3px 6px 3px #ccc;
+  box-shadow: 3px 3px 6px 3px #C92B13;
   margin-bottom: 60px;
 `

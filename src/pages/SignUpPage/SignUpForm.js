@@ -2,13 +2,33 @@ import React from "react";
 import { TextField, Button } from "@mui/material";
 import useForm from "../../hooks/useForm";
 import { InputsContainer } from "./styled";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { signUp } from "../../services/user";
 
 const SignUpForm = () => {
+  const navigate = useNavigate();
   const [form, onChange, clear] = useForm({ name:"", email: "", password: "" });
-  const onSubmitForm = (event) => {
-    console.log(form);
-    event.preventDefault();
+
+  const emailValidation = (email) => {
+    const validation = /\S+@\S+\.\S+/;
+    return validation.test(email);
   };
+
+  const onSubmitForm = (event) => {
+    if (!emailValidation(form.email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Email inválido!",
+      });
+      event.preventDefault();
+      return;
+    }
+    event.preventDefault();
+    signUp(form, clear, navigate);
+  };
+
   return (
     <InputsContainer>
       <form onSubmit={onSubmitForm}>
