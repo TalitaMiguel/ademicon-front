@@ -41,7 +41,7 @@ const HomePage = () => {
           color={"primary"}
           onClick={() => goToEdit(navigate, data.id)}
         >
-          Editar suas informações
+          Editar informações
         </Button>
 
         <Button

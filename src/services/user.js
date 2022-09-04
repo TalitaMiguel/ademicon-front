@@ -33,7 +33,14 @@ export const signUp = (body, clear, navigate, setIsLoading) => {
     .post(`${BASE_URL}/signup`, body)
     .then(() => {
       setIsLoading(false)
-      Swal.fire("Cadastrado!", "Seu cadastro foi realizado!", "success");
+
+      Swal.fire({
+        icon: "success",
+        title: "Cadastrado!",
+        text: "Seu cadastro foi realizado.",
+        confirmButtonColor: "#B7312C",
+      });
+
       goToLogin(navigate);
       clear();
     })
@@ -55,7 +62,12 @@ export const edit = (id, body, clear, navigate, setIsLoading) => {
     .put(`${BASE_URL}/${id}`, body)
     .then(() => {
       setIsLoading(false)
-      Swal.fire("Editado!", "Seu cadastro foi editado.", "success");
+      Swal.fire({
+        icon: "success",
+        title: "Editado!",
+        text: "Seu cadastro foi editado.",
+        confirmButtonColor: "#B7312C",
+      });
       goToHome(navigate)
     })
     .catch(() => {
@@ -101,7 +113,12 @@ export const userDelete = (id, navigate) => {
       axios
         .delete(`${BASE_URL}/${id}`)
         .then(() => {
-          Swal.fire("Deletado!", "Seu cadastro foi deletado.", "success");
+          Swal.fire({
+            icon: "success",
+            title: "Deletado!",
+            text: "Seu cadastro foi deletado.",
+            confirmButtonColor: "#B7312C",
+          });
           goToLogin(navigate)
         })
         .catch((error) => {
@@ -109,7 +126,6 @@ export const userDelete = (id, navigate) => {
             icon: "error",
             title: "Oops...",
             text: "Erro ao deletar cadastro!",
-            footer: `Status do erro - ${error.response.status}`,
           });
         });
     }
