@@ -7,7 +7,7 @@
 <p align="center">
   <a href="#surge">🔗Surge</a> &#xa0;|&#xa0; 
   <a href="#projeto">💻Projeto</a> &#xa0;|&#xa0;
-  <a href="#bibliotecas">[📚Bibliotecas</a> &#xa0;|&#xa0;
+  <a href="#bibliotecas">📚Bibliotecas</a> &#xa0;|&#xa0;
   <a href="#tecnologias">🛠️Tecnologias</a> &#xa0;|&#xa0;
   <a href="#desenvolvedora">👨🏻‍💻Desenvolvedora</a> &#xa0;|&#xa0;
   <a href="#imagens">📱Imagens</a>  
@@ -73,7 +73,6 @@ Por padrão a aplicação rodará localmente na porta 3000.
 
 <h2 id="imagens">📱Imagens</h2>
 
-
 Página de Login             |  Página de Cadastro
 :-------------------------:|:-------------------------:
 ![Login](https://user-images.githubusercontent.com/62106501/188336838-a86a4561-ffbc-4c7d-8c2d-78a3650d952f.png) | ![Cadastro](https://user-images.githubusercontent.com/62106501/188336872-d64b3289-9760-49d2-a321-5c1974591f25.png)
@@ -82,10 +81,13 @@ Página de Home |  Página de edição
 :-------------------------:|:-------------------------:
 ![Home](https://user-images.githubusercontent.com/62106501/188336924-042c9afb-ea9c-42be-a027-7940c054e2b3.png) | ![Editar](https://user-images.githubusercontent.com/62106501/188336941-bc2353d9-4eac-4802-9e82-f10610ca98ea.png)
 
-
 Pop-up Deletar  | Pop-up Sucesso
 :-------------------------:|:-------------------------:
 ![Deletar](https://user-images.githubusercontent.com/62106501/188336967-3951b886-8f31-4eb2-bb93-e9803f7c741e.png) | ![Sucesso](https://user-images.githubusercontent.com/62106501/188336983-21e88a55-1cc3-4e88-9b50-d1414faa56eb.png)
+
+Loading | Página de Erro 
+:-------------------------:|:-------------------------:
+![Loading](https://user-images.githubusercontent.com/62106501/188338020-e11d84df-2194-4bc8-b777-c3a0de95b471.png) | ![Erro](https://user-images.githubusercontent.com/62106501/188337798-c4311494-a383-4f9e-bc88-f4384eb16e23.png)
 
 <h3 align="center">
   <a href='#top'>Voltar para o topo.</a>
