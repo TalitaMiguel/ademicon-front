@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+<div id= "top" align="center"><img width= "350px", src="https://user-images.githubusercontent.com/62106501/188336464-2e1eb9be-836b-4aad-8625-e31fd40df6d1.png"/></div>
+<h3 align="center">Teste full-stack Ademicon</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<h3 align="center"> Sumário  </h3>
+<p align="center">
+  <a href="#surge">🔗Surge</a> &#xa0;|&#xa0; 
+  <a href="#projeto">💻Projeto</a> &#xa0;|&#xa0;
+  <a href="#bibliotecas">[📚Bibliotecas</a> &#xa0;|&#xa0;
+  <a href="#tecnologias">🛠️Tecnologias</a> &#xa0;|&#xa0;
+  <a href="#desenvolvedora">👨🏻‍💻Desenvolvedora</a> &#xa0;|&#xa0;
+  <a href="#imagens">📱Imagens</a>  
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2 id="sobre"> ✔O que funciona </h2>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Login 
+   - Na tela de login utilizando um e-mail e uma senha cadastrada o usuário consegue ter acesso 
+   a área com proteção de autenticação.
+- Cadastro
+   - Efetua o cadastro de um novo usuário para adquirir uma autenticação 
+   - Após o cadastro o usuário é encaminhado para fazer o login
+- Home
+   - Na página Home é possivel visualizar dois botões (editar e deletar) e uma saudação personalizada 
+   com o nome cadastrado no banco de dados
+- Editar
+  - Na página de edição é possível alterar todos os dados cadastrados (nome, email e senha)
+- Deletar
+  - Ao clicar no botão, aparece um pop-up para confirmar se o usuário deve ser deletado permanentemente
 
-### `npm test`
+<h2 id="surge"> 🔗Link Surge </h2>  
+https://ademicon.surge.sh/login
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2 id="projeto"> 💻Como Rodar o Projeto Localmente </h2>
 
-### `npm run build`
+Siga o passo-a-passo abaixo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Passo                     | Comando            |
+| ------------------------- | ------------------ |
+| Faça o Clone              | `git clone`        |
+| Instale as Dependências   | `npm install`      |
+| Utilize o Script Start    | `npm start`        |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Por padrão a aplicação rodará localmente na porta 3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2 id="bibliotecas"> 📚Bibliotecas Utilizadas </h2>
 
-### `npm run eject`
+<p>🔗 <a href="https://axios-http.com/" target="_blank"> Axios </a></p>
+<p>🔗 <a href="https://v4.mui.com/pt/" target="_blank"> Material-UI<a/> </p>
+<p>🔗 <a href="https://reactrouter.com/" target="_blank"> react-router-dom </a></p>
+<p>🔗 <a href="https://www.styled-components.com/" target="_blank"> Styled Components<a/> </p>
+<p>🔗 <a href="https://sweetalert2.github.io/" target="_blank"> SweetAlert2<a/> </p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2 id="tecnologias">🛠Tecnologias Utilizadas</h2>
+ <div style="display: inline_block"><br>
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"> 
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ <h2 id="desenvolvedora" >👩🏻‍💻Desenvolvido por: </h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+</h2>
+<table>
+  <tr>
+  <td><a href="https://github.com/TalitaMiguel"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62106501?v=4" width="100px;" alt=""/><br /><sub><b>Talita Miguel</b></sub></a><br />
+    </td> 
+  </tr>
+</table>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h2 id="imagens">📱Imagens</h2>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Página de Login             |  Página de Cadastro
+:-------------------------:|:-------------------------:
+![Login](https://user-images.githubusercontent.com/62106501/188336838-a86a4561-ffbc-4c7d-8c2d-78a3650d952f.png) | ![Cadastro](https://user-images.githubusercontent.com/62106501/188336872-d64b3289-9760-49d2-a321-5c1974591f25.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Página de Home |  Página de edição
+:-------------------------:|:-------------------------:
+![Home](https://user-images.githubusercontent.com/62106501/188336924-042c9afb-ea9c-42be-a027-7940c054e2b3.png) | ![Editar](https://user-images.githubusercontent.com/62106501/188336941-bc2353d9-4eac-4802-9e82-f10610ca98ea.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Pop-up Deletar  | Pop-up Sucesso
+:-------------------------:|:-------------------------:
+![Deletar](https://user-images.githubusercontent.com/62106501/188336967-3951b886-8f31-4eb2-bb93-e9803f7c741e.png) | ![Sucesso](https://user-images.githubusercontent.com/62106501/188336983-21e88a55-1cc3-4e88-9b50-d1414faa56eb.png)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3 align="center">
+  <a href='#top'>Voltar para o topo.</a>
+</h3>
