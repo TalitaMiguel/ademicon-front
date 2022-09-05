@@ -6,12 +6,12 @@ export const ScreenContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 `;
 
 export const LogoImage = styled.img`
   width: 70vw;
-  max-width: 350px;
+  max-width: 400px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px 1px gray;
   border: 3px solid #b7312c;

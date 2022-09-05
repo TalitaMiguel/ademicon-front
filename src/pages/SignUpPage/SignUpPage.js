@@ -1,12 +1,12 @@
 import React from "react";
-import casa from "../../assets/images/carro-casa.png";
+import logo from "../../assets/images/logo7.png";
 import { ScreenContainer, LogoImage } from "./styled";
 import SignUpForm from "./SignUpForm";
 
 const SignUpPage = () => {
   return (
     <ScreenContainer>
-      <LogoImage src={casa} />
+      <LogoImage src={logo} />
       <SignUpForm />
     </ScreenContainer>
   );

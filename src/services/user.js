@@ -3,12 +3,18 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { goToHome, goToLogin } from "../routes/coordinator";
 
-export const login = (body, clear, navigate, setIsLoggedButton, setIsLoading) => {
-  setIsLoading(true)
+export const login = (
+  body,
+  clear,
+  navigate,
+  setIsLoggedButton,
+  setIsLoading
+) => {
+  setIsLoading(true);
   axios
     .post(`${BASE_URL}/login`, body)
     .then((res) => {
-      setIsLoading(false)
+      setIsLoading(false);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("id", res.data.id);
       goToHome(navigate);
@@ -16,7 +22,7 @@ export const login = (body, clear, navigate, setIsLoggedButton, setIsLoading) =>
       clear();
     })
     .catch(() => {
-      setIsLoading(false)
+      setIsLoading(false);
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -28,12 +34,19 @@ export const login = (body, clear, navigate, setIsLoggedButton, setIsLoading) =>
 };
 
 export const signUp = (body, clear, navigate, setIsLoading) => {
-  setIsLoading(true)
+  setIsLoading(true);
   axios
     .post(`${BASE_URL}/signup`, body)
     .then(() => {
-      setIsLoading(false)
-      Swal.fire("Cadastrado!", "Seu cadastro foi realizado!", "success");
+      setIsLoading(false);
+
+      Swal.fire({
+        icon: "success",
+        title: "Cadastrado!",
+        text: "Seu cadastro foi realizado.",
+        confirmButtonColor: "#B7312C",
+      });
+
       goToLogin(navigate);
       clear();
     })
@@ -42,29 +55,36 @@ export const signUp = (body, clear, navigate, setIsLoading) => {
         icon: "error",
         title: "Oops...",
         confirmButtonColor: "#B7312C",
-        text: "Erro ao cadastrar!",
+        text: "Erro ao cadastrar, verifique as informações digitadas e caso o erro persista tente novamente mais tarde.",
       });
       clear();
-      setIsLoading(false)
+      setIsLoading(false);
     });
 };
 
 export const edit = (id, body, clear, navigate, setIsLoading) => {
-  setIsLoading(true)
+  setIsLoading(true);
+  console.log("form2", body);
+  console.log("id", id);
   axios
     .put(`${BASE_URL}/${id}`, body)
     .then(() => {
-      setIsLoading(false)
-      Swal.fire("Editado!", "Seu cadastro foi editado.", "success");
-      goToHome(navigate)
+      setIsLoading(false);
+      Swal.fire({
+        icon: "success",
+        title: "Editado!",
+        text: "Seu cadastro foi editado.",
+        confirmButtonColor: "#B7312C",
+      });
+      goToHome(navigate);
     })
     .catch(() => {
-      setIsLoading(false)
+      setIsLoading(false);
       Swal.fire({
         icon: "error",
         title: "Oops...",
         confirmButtonColor: "#B7312C",
-        text: "Erro ao editar!"
+        text: "Erro ao editar, verifique as informações digitadas e caso o erro persista tente novamente mais tarde.",
       });
       clear();
     });
@@ -101,15 +121,19 @@ export const userDelete = (id, navigate) => {
       axios
         .delete(`${BASE_URL}/${id}`)
         .then(() => {
-          Swal.fire("Deletado!", "Seu cadastro foi deletado.", "success");
-          goToLogin(navigate)
+          Swal.fire({
+            icon: "success",
+            title: "Deletado!",
+            text: "Seu cadastro foi deletado.",
+            confirmButtonColor: "#B7312C",
+          });
+          goToLogin(navigate);
         })
         .catch((error) => {
           Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Erro ao deletar cadastro!",
-            footer: `Status do erro - ${error.response.status}`,
           });
         });
     }

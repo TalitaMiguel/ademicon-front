@@ -5,31 +5,35 @@ import { useNavigate } from "react-router-dom";
 import { goToHome, goToLogin } from "../routes/coordinator";
 import { StyledToolbar } from "./styled";
 
-const Header = ({isLoggedButton, setIsLoggedButton}) => {
+const Header = ({ isLoggedButton, setIsLoggedButton }) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
   const logout = () => {
-    localStorage.removeItem("token")
-    localStorage.removeItem("id")
-  }
+    localStorage.removeItem("token");
+    localStorage.removeItem("id");
+  };
 
   const isLoggedButtonAction = () => {
     if (token) {
-      logout()
-      setIsLoggedButton("Login")
-      goToLogin(navigate)
+      logout();
+      setIsLoggedButton("Login");
+      goToLogin(navigate);
     } else {
-      goToLogin(navigate)
+      goToLogin(navigate);
     }
-  }
+  };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <StyledToolbar>
-        <Button onClick={() => goToHome(navigate)} color="inherit">
-          ADEMICON
-        </Button>
+        {token ? (
+          <Button onClick={() => goToHome(navigate)} color="inherit">
+            ADEMICON
+          </Button>
+        ) : (
+          <span>ADEMICON</span>
+        )}
         <Button onClick={() => isLoggedButtonAction()} color="inherit">
           {isLoggedButton}
         </Button>

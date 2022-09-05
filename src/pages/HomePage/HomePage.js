@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useProtectPage from "../../hooks/useProtectedPage";
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/carro-casa.png";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { goToEdit } from "../../routes/coordinator";
@@ -32,8 +32,9 @@ const HomePage = () => {
   return (
     <ScreenContainer>
       <HomeImage src={logo} />
+      <Text1>ADEMICON</Text1>
       <Text1>{`Seja bem vindo(a), ${data.name_user}`}</Text1>
-      <Text2>Estamos felizes em ter você aqui conosco!</Text2>
+      <Text2>Estamos felizes por ter você conosco!</Text2>
       <ButtonContainer>
         <Button
           sx={{ mt: 2 }}
@@ -41,7 +42,7 @@ const HomePage = () => {
           color={"primary"}
           onClick={() => goToEdit(navigate, data.id)}
         >
-          Editar suas informações
+          Editar informações
         </Button>
 
         <Button

@@ -6,7 +6,7 @@ export const ErrorPageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: 100vh;
 `;
 
 export const ErrorImage = styled.img`
@@ -17,4 +17,9 @@ export const ErrorImage = styled.img`
 export const ErrorText = styled.h1`
   font-size: 4rem;
   color: #b7312c;
+
+  @media (max-width: 450px) {
+    text-align: center;
+    font-size: 3.5rem;
+  }
 `;

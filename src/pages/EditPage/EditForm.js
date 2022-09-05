@@ -8,7 +8,7 @@ import { TextField, Button,CircularProgress } from "@mui/material";
 
 const EditForm = () => {
   const navigate = useNavigate();
-  const {id} = useParams
+  const id = localStorage.getItem("id");
   const [form, onChange, clear] = useForm({ name:"", email: "", password: "" });
   const [isLoading, setIsLoading] = useState(false)
 
@@ -16,6 +16,9 @@ const EditForm = () => {
     const validation = /\S+@\S+\.\S+/;
     return validation.test(email);
   };
+
+  console.log("form1", form)
+  console.log("id1", id)
 
   const onSubmitForm = (event) => {
     if (!emailValidation(form.email)) {
@@ -68,7 +71,7 @@ const EditForm = () => {
           margin="normal"
           required
           inputProps={{ inputMode: "numeric", pattern: "^.{6,}" }}
-          helperText={"Deve conter no mínimo 6 caracteres"}
+          helperText={"Senha deve conter no mínimo 6 caracteres"}
         />
         <Button
           type={"submit"}
@@ -77,7 +80,7 @@ const EditForm = () => {
           variant={"contained"}
           color={"primary"}
         >
-          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Editar cadastro</>}
+          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Salvar cadastro</>}
         </Button>
       </form>
     </InputsContainer>
