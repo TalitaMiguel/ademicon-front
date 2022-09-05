@@ -10,9 +10,12 @@ export const ScreenContainer = styled.div`
 `;
 
 export const HomeImage = styled.img`
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: 20px;
+  width: 70vw;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 1px gray;
+  border: 3px solid #b7312c;
+  margin: 65px 0 20px;
 `;
 
 export const Text1 = styled.h1`
@@ -20,14 +23,14 @@ export const Text1 = styled.h1`
     text-align: center;
     font-size: 2rem;
   }
-`
+`;
 
 export const Text2 = styled.h2`
   @media (max-width: 450px) {
     text-align: center;
     font-size: 1.5rem;
   }
-`
+`;
 
 export const ButtonContainer = styled.div`
   width: 100%;

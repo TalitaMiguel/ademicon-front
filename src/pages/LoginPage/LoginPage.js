@@ -1,5 +1,5 @@
 import React from "react";
-import casa from "../../assets/images/carro-casa.png";
+import logo from "../../assets/images/logo7.png";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { goToSignUp } from "../../routes/coordinator";
@@ -11,7 +11,7 @@ const LoginPage = ({ isLoggedButton, setIsLoggedButton }) => {
 
   return (
     <ScreenContainer>
-      <LogoImage src={casa} />
+      <LogoImage src={logo} />
       <LoginForm
         isLoggedButton={isLoggedButton}
         setIsLoggedButton={setIsLoggedButton}
