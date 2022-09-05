@@ -58,6 +58,8 @@ export const signUp = (body, clear, navigate, setIsLoading) => {
 
 export const edit = (id, body, clear, navigate, setIsLoading) => {
   setIsLoading(true)
+  console.log("form2", body)
+  console.log("id", id)
   axios
     .put(`${BASE_URL}/${id}`, body)
     .then(() => {

@@ -8,7 +8,7 @@ import { TextField, Button,CircularProgress } from "@mui/material";
 
 const EditForm = () => {
   const navigate = useNavigate();
-  const {id} = useParams
+  const id = localStorage.getItem("id");
   const [form, onChange, clear] = useForm({ name:"", email: "", password: "" });
   const [isLoading, setIsLoading] = useState(false)
 
@@ -16,6 +16,9 @@ const EditForm = () => {
     const validation = /\S+@\S+\.\S+/;
     return validation.test(email);
   };
+
+  console.log("form1", form)
+  console.log("id1", id)
 
   const onSubmitForm = (event) => {
     if (!emailValidation(form.email)) {
