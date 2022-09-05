@@ -6,12 +6,13 @@ export const ScreenContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 `;
 
 export const HomeImage = styled.img`
   width: 100%;
   max-width: 350px;
+  margin-bottom: 20px;
 `;
 
 export const Text1 = styled.h1`

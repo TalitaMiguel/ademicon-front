@@ -25,7 +25,7 @@ const Header = ({isLoggedButton, setIsLoggedButton}) => {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <StyledToolbar>
         <Button onClick={() => goToHome(navigate)} color="inherit">
           ADEMICON

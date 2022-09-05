@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useProtectPage from "../../hooks/useProtectedPage";
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/logo7.png";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { goToEdit } from "../../routes/coordinator";

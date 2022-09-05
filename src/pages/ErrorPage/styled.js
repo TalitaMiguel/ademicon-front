@@ -6,7 +6,7 @@ export const ErrorPageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: 100vh;
 `;
 
 export const ErrorImage = styled.img`

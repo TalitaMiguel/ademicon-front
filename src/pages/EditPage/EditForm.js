@@ -68,7 +68,7 @@ const EditForm = () => {
           margin="normal"
           required
           inputProps={{ inputMode: "numeric", pattern: "^.{6,}" }}
-          helperText={"Deve conter no mínimo 6 caracteres"}
+          helperText={"Senha deve conter no mínimo 6 caracteres"}
         />
         <Button
           type={"submit"}
@@ -77,7 +77,7 @@ const EditForm = () => {
           variant={"contained"}
           color={"primary"}
         >
-          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Editar cadastro</>}
+          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Salvar cadastro</>}
         </Button>
       </form>
     </InputsContainer>
